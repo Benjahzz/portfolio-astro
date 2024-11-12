@@ -1,0 +1,14 @@
+---
+import ToggleTheme from "./ToggleTheme";
+---
+
+<header class="flex justify-between py-10 items-center">
+  <nav>
+    <ul class="flex gap-4 font-medium text-lg">
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/about">Sobre mi</a></li>
+      <li><a href="/blog">Mis proyectos</a></li>
+    </ul>
+  </nav>
+  <ToggleTheme client:load />
+</header>
