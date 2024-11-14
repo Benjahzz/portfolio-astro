@@ -9,14 +9,14 @@ import {
 } from "../ui/card";
 ---
 
-<Card>
+<Card className="hover:scale-105 transition-transform cursor-pointers shadow-sm" >
   <CardHeader>
     <CardTitle className="text-xl">
       Making a design system from scratch
     </CardTitle>
   </CardHeader>
   <CardContent> Design, Pattern </CardContent>
-  <CardFooter className="items-center gap-2">
-    <Calendar /> 12 Feb 2020
+  <CardFooter className="items-center gap-2 text-sm">
+    <Calendar size={20}/> 12 Feb 2020
   </CardFooter>
 </Card>

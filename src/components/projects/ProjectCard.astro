@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import { Badge } from "@/components/ui/badge";
+import Project1 from "@/assets/images/project-1.png";
+import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
+---
+<Card className="h-72">
+    <CardContent className="flex gap-4 h-full p-0 ">
+      <Image src={Project1} alt="Project 1"  />
+      <div class="flex flex-col justify-between h-full ">
+        <Badge>Dashboard</Badge>
+        <h3 class="text-lg font-semibold ">Designing Dashboards</h3>
+        <p>
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+        </p>
+        <div>
+          <Badge variant="outline">React</Badge>
+          <Badge variant="outline">Typescript</Badge>
+          <Badge variant="outline">Fastify</Badge>
+        </div>
+      </div>
+    </CardContent>
+  </Card>

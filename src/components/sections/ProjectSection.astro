@@ -1,0 +1,18 @@
+---
+import { ArrowRight } from "lucide-react";
+import ProjectCard from "../projects/ProjectCard.astro";
+
+
+---
+
+<section>
+    <h2>Proyectos</h2>
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+    </div>
+    <a href="#" class="flex gap-2 items-center"
+        >Ver más <ArrowRight size={15} /></a
+    >
+</section>
