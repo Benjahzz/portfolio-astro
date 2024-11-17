@@ -1,23 +1,31 @@
 ---
 import { Image } from "astro:assets";
 import { Badge } from "@/components/ui/badge";
-import Project1 from "@/assets/images/project-1.png";
-import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
+import Project1 from "@/assets/images/projects/project-1.svg";
+import { Card, CardContent } from "../ui/card";
 ---
-<Card className="h-72">
-    <CardContent className="flex gap-4 h-full p-0 ">
-      <Image src={Project1} alt="Project 1"  />
-      <div class="flex flex-col justify-between h-full ">
-        <Badge>Dashboard</Badge>
-        <h3 class="text-lg font-semibold ">Designing Dashboards</h3>
-        <p>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-        </p>
-        <div>
-          <Badge variant="outline">React</Badge>
-          <Badge variant="outline">Typescript</Badge>
-          <Badge variant="outline">Fastify</Badge>
-        </div>
-      </div>
-    </CardContent>
-  </Card>
+
+<Card>
+  <CardContent className="flex flex-col h-full items-start gap-4 pt-6">
+    <Image
+      src={Project1}
+      alt="Project 1"
+      width={300}
+      height={300}
+      class="w-20 h-20 rounded-md rounded-b-none"
+    />
+
+    <Badge>Dashboard</Badge>
+    <h3 class="text-lg font-semibold">Designing Dashboards</h3>
+    <p>
+      Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+      amet sint. Velit officia consequat duis enim velit mollit.
+      Exercitation veniam consequat sunt nostrud amet.
+    </p>
+    <div>
+      <Badge variant="outline">React</Badge>
+      <Badge variant="outline">Typescript</Badge>
+      <Badge variant="outline">Fastify</Badge>
+    </div>
+  </CardContent>
+</Card>

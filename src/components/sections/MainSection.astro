@@ -1,11 +1,11 @@
 ---
-import { Image } from "astro:assets";
 import { Button } from "../ui/button";
-import Logo from "@/assets/images/logo.svg";
 import { Download } from "lucide-react";
+
+
 ---
 
-<section class="flex mt-40 items-center">
+<section class="flex mt-40 items-center mb-30">
   <div class="flex flex-col flex-1 gap-8">
     <h1 class="text-5xl font-bold">
       Hi, I am Benjamin, Software Engineer
@@ -16,7 +16,9 @@ import { Download } from "lucide-react";
       Exercitation veniam consequat sunt nostrud amet.
     </p>
 
-    <Button className="self-start inline-flex items-center gap-2 " >
+    <Button
+      className="self-start inline-flex items-center gap-2 "
+    >
       Download Resume
       <Download size={30} />
     </Button>

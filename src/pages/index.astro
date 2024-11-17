@@ -3,13 +3,14 @@ import MainSection from "@/components/sections/MainSection.astro";
 import Layout from "../layouts/Layout.astro";
 import PostSection from "@/components/sections/PostSection.astro";
 import ProjectSection from "@/components/sections/ProjectSection.astro";
-
+import ExperienceSection from "@/components/sections/ExperienceSection.astro";
 ---
 
 <Layout>
-  <main>
+  <main class="flex flex-col gap-40">
     <MainSection />
-    <PostSection />
     <ProjectSection />
+    <ExperienceSection />
+    <PostSection />
   </main>
 </Layout>

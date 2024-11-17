@@ -1,0 +1,15 @@
+---
+import { cn } from "@/lib/utils";
+import type { HTMLTag } from "astro/types";
+
+interface Props {
+  className?: string | undefined;
+  tag?: HTMLTag;
+}
+
+const { className, tag: Element = "div" } = Astro.props as Props;
+---
+
+<Element class={cn("max-w-[1100px] mx-auto", className)}>
+  <slot />
+</Element>

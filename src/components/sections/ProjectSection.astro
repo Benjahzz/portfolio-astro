@@ -1,18 +1,17 @@
 ---
 import { ArrowRight } from "lucide-react";
 import ProjectCard from "../projects/ProjectCard.astro";
-
-
+import SectionHeader from "../SectionHeader.astro";
 ---
 
-<section>
-    <h2>Proyectos</h2>
-    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-    </div>
-    <a href="#" class="flex gap-2 items-center"
-        >Ver más <ArrowRight size={15} /></a
-    >
+<section class="flex flex-col gap-6">
+  <SectionHeader
+    title="Proyectos"
+    dataLink={{ title: "Ver todos los proyectos", url: "/proyectos" }}
+  />
+  <div class="grid grid-cols-1 gap-16 md:grid-cols-2">
+    <ProjectCard />
+    <ProjectCard />
+    <ProjectCard />
+  </div>
 </section>

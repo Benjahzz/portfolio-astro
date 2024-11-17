@@ -1,16 +1,17 @@
 ---
 import { ArrowRight } from "lucide-react";
 import PostCard from "../posts/PostCard.astro";
+import SectionHeader from "../SectionHeader.astro";
 ---
 
-<section class="mt-60 flex flex-col gap-6">
-  <h2 class="text-2xl">Ultimos posts</h2>
-  <div class="flex justify-between gap-8">
+<section class="flex flex-col gap-6">
+  <SectionHeader
+    title="Blog"
+    dataLink={{ title: "Ver todos los artículos", url: "/articulos" }}
+  />
+  <div class="flex justify-between gap-4">
     <PostCard />
     <PostCard />
     <PostCard />
   </div>
-  <a href="#" class="flex gap-2 items-center"
-    >Ver más <ArrowRight size={15} /></a
-  >
 </section>

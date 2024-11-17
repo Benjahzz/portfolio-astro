@@ -1,0 +1,24 @@
+---
+import { getCollection } from "astro:content";
+import TimelineItem from "../experience/TimelineItem";
+
+const works = (await getCollection("works")).sort((a, b) => b.data.dateEntry.valueOf() - a.data.dateEntry.valueOf());
+---
+
+<section>
+  <h2 class="text-3xl font-bold text-center mb-12">
+    Experience Timeline
+  </h2>
+  <div class="relative">
+    <div
+      class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-200"
+    >
+    </div>
+    {
+      works.map((work, index) => {
+        const side = index % 2 === 0 ? "right" : "left";
+        return <TimelineItem side={side} work={work} client:load />;
+      })
+    }
+  </div>
+</section>

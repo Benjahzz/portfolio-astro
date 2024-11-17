@@ -4,8 +4,9 @@
 import "@/styles/globals.css";
 import MainHead from "../components/MainHead.astro";
 import Navbar from "@/components/Navbar.astro";
-import '@fontsource-variable/heebo';
-
+import "@fontsource-variable/heebo";
+import Footer from "@/components/Footer.astro";
+import Container from "@/components/Container.astro";
 
 // Component Imports
 
@@ -22,18 +23,18 @@ const { title, description } = Astro.props;
     <MainHead title={title} description={description} />
   </head>
   <body>
-    <div class="max-w-[1100px] mx-auto">
+    <Container>
       <Navbar />
       <slot />
-    </div>
-    
+    </Container>
+    <Footer />
   </body>
 </html>
 
 <style>
   body {
     font-family: "Heebo Variable", sans-serif;
-    color: #21243D;
+    color: #21243d;
   }
 </style>
 
