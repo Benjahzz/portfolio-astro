@@ -4,7 +4,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "../ui/popover";
-import { Badge } from "../ui/badge";
 import Cardwork from "./Cardwork";
 import type { CollectionEntry } from "astro:content";
 
@@ -21,9 +20,6 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
     title,
     description,
     date,
-    companyLink,
-    position,
-    usedTools,
     color,
   } = work.data;
   return (
