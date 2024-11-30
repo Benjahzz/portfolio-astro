@@ -10,6 +10,6 @@ interface Props {
 const { className, tag: Element = "div" } = Astro.props as Props;
 ---
 
-<Element class={cn("max-w-[1100px] mx-auto", className)}>
+<Element class={cn("max-w-[1100px] mx-auto px-6", className)}>
   <slot />
 </Element>

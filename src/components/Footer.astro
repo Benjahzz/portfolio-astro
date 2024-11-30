@@ -10,26 +10,26 @@ import Container from "./Container.astro";
 ---
 
 <section class="bg-primary p-20 pb-8 text-white mt-20">
-  <Container
-    tag="section"
-    className="flex flex-col gap-8 items-center"
-  >
-    <h2 class="text-2xl">Get in Touch</h2>
+  <Container tag="section" className="flex flex-col gap-8 ">
+    <h2 class="text-2xl">Contacto</h2>
     <p>
-      I'm always open to new opportunities and collaborations. Feel
-      free to reach out!
+      Seasoned Full Stack Software Engineer with over 8 years of
+      hands-on experience in designing and implementing robust,
+      scalable, and innovative web solutions. Adept at leveraging a
+      comprehensive skill set encompassing front-end and back-end
+      technologies
     </p>
+    <a
+      href="mailto:ben.ja07@live.cl"
+      class="flex gap-2 items-center font-bold"
+    >
+      <Mail />
+      ben.ja07@live.cl
+    </a>
     <div class="flex gap-4 items-center">
       <GitHubLogoIcon className="w-8 h-8" />
       <LinkedInLogoIcon className="w-8 h-8" />
       <TwitterLogoIcon className="w-8 h-8" />
     </div>
-    <Button variant={"secondary"}>
-      <Mail size={20} />
-      Contact Me
-    </Button>
-    <p>
-      &copy; {new Date().getFullYear()} Portfolio Benjamin Bastidas
-    </p>
   </Container>
 </section>
