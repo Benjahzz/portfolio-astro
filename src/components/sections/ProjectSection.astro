@@ -1,6 +1,13 @@
 ---
+import { getCollection } from "astro:content";
 import ProjectCard from "../projects/ProjectCard.astro";
 import SectionHeader from "../SectionHeader.astro";
+
+const projects = await getCollection("projects");
+
+projects.sort((a, b) => {
+  return a.data.order - b.data.order;
+});
 ---
 
 <section class="flex flex-col gap-6">
@@ -9,8 +16,10 @@ import SectionHeader from "../SectionHeader.astro";
     dataLink={{ title: "Ver todos los proyectos", url: "/proyectos" }}
   />
   <div class="grid grid-cols-1 gap-16 md:grid-cols-2">
-    <ProjectCard />
-    <ProjectCard />
-    <ProjectCard />
+    {
+      projects.map((project) => {
+        return <ProjectCard project={project.data} />;
+      })
+    }
   </div>
 </section>

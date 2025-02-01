@@ -14,4 +14,15 @@ export const collections = {
 			companyLink: z.string(),
 		}),
 	}),
+	projects: defineCollection({
+		type: 'content',
+		schema: ({image}) => z.object({
+			order: z.number(),
+			title: z.string(),
+			type: z.string(),
+			description: z.string(),
+			usedTools: z.array(z.string()),
+			logo: image()
+		}),
+	}),
 };

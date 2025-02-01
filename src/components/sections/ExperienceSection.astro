@@ -2,7 +2,9 @@
 import { getCollection } from "astro:content";
 import TimelineItem from "../experience/TimelineItem";
 
-const works = (await getCollection("works")).sort((a, b) => b.data.dateEntry.valueOf() - a.data.dateEntry.valueOf());
+const works = (await getCollection("works")).sort(
+  (a, b) => b.data.dateEntry.valueOf() - a.data.dateEntry.valueOf()
+);
 ---
 
 <section>
