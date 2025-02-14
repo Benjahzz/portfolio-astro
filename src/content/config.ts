@@ -35,6 +35,7 @@ export const collections = {
 			imageUrl: z.string(),
 			url: z.string(),
 			order: z.number(),
+			buttonText: z.string(),
 		}),
 	}),
 };

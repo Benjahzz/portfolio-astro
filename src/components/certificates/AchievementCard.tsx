@@ -13,22 +13,25 @@ import {
 } from "@cloudinary/react";
 import { cloudinaryClient } from "@/utils/cloudinary/cloudinaryClient";
 import type { InferEntrySchema } from "astro:content";
+import { formatDate } from "@/utils/formatDate";
 
-interface AchievementCardProps {
+interface AchievementCardProps
+  extends React.HTMLAttributes<HTMLDivElement> {
   achievement: InferEntrySchema<"achievements">;
 }
 
 const AchievementCard: React.FC<AchievementCardProps> = ({
   achievement,
+  className,
 }) => {
-  const { date, description, imageUrl, order, title, type, url } =
+  const { date, description, imageUrl, order, title, type, url, buttonText } =
     achievement;
 
   let headerImage = cloudinaryClient.image(
     `portfolio-renew/${imageUrl}`
   );
   return (
-    <Card>
+    <Card className={className}>
       <CardHeader>
         <div className="flex items-center">
           <AdvancedImage
@@ -44,10 +47,13 @@ const AchievementCard: React.FC<AchievementCardProps> = ({
         <p className="text-gray-600  text-ellipsis overflow-hidden line-clamp-3 ">
           {description}
         </p>
+        <p className="text-gray-500 text-sm mt-2">
+          {formatDate(date)}
+        </p>
       </CardContent>
       <CardFooter>
-        <a href={url} target="_blank" rel="noreferrer">
-          <Button variant={"outline"}>Ver certificado</Button>
+        <a href={url} target="_blank" rel="noreferrer" >
+          <Button variant={"outline"}>{buttonText}</Button>
         </a>
       </CardFooter>
     </Card>

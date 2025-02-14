@@ -2,10 +2,10 @@
 import { Mail } from "lucide-react";
 import {
   GitHubLogoIcon,
+  InstagramLogoIcon,
   LinkedInLogoIcon,
   TwitterLogoIcon,
 } from "@radix-ui/react-icons";
-import { Button } from "./ui/button";
 import Container from "./Container.astro";
 ---
 
@@ -13,11 +13,10 @@ import Container from "./Container.astro";
   <Container tag="section" className="flex flex-col gap-8 ">
     <h2 class="text-2xl">Contacto</h2>
     <p>
-      Seasoned Full Stack Software Engineer with over 8 years of
-      hands-on experience in designing and implementing robust,
-      scalable, and innovative web solutions. Adept at leveraging a
-      comprehensive skill set encompassing front-end and back-end
-      technologies
+      Ingeniero de software Full Stack con más de 2 años de
+      experiencia en el desarrollo de aplicaciones web. Si tienes un
+      proyecto en mente o simplemente quieres saludar, no dudes en
+      enviarme un mensaje.
     </p>
     <a
       href="mailto:ben.ja07@live.cl"
@@ -29,7 +28,9 @@ import Container from "./Container.astro";
     <div class="flex gap-4 items-center">
       <GitHubLogoIcon className="w-8 h-8" />
       <LinkedInLogoIcon className="w-8 h-8" />
-      <TwitterLogoIcon className="w-8 h-8" />
+      <a href="https://www.instagram.com/benja_bstidas/" target="_blank" rel="noopener noreferrer">
+        <InstagramLogoIcon className="w-8 h-8" />
+      </a>
     </div>
   </Container>
 </section>
