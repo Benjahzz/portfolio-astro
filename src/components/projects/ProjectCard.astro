@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import { Badge } from "@/components/ui/badge";
-import Project2 from "@/assets/images/projects/project-02.svg";
 import { Card, CardContent, CardHeader } from "../ui/card";
 import type { InferEntrySchema } from "astro:content";
 import { ArrowRight } from "lucide-react";
@@ -27,7 +26,7 @@ const { project } = Astro.props;
         href={""}
         class="flex items-center  h-fit gap-2 text-sm text-gray-500 hover:text-gray-700"
       >
-        Ver {project.title}
+        Ver proyecto
         <ArrowRight size={16} />
       </a>
     </div>

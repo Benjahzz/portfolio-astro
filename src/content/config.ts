@@ -25,4 +25,16 @@ export const collections = {
 			logo: image()
 		}),
 	}),
+	achievements: defineCollection({
+		type: 'content',
+		schema: ({image}) => z.object({
+			title: z.string(),
+			type: z.string(),
+			description: z.string(),
+			date: z.date(),
+			imageUrl: z.string(),
+			url: z.string(),
+			order: z.number(),
+		}),
+	}),
 };
