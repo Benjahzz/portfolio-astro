@@ -1,7 +1,8 @@
-import type { CollectionEntry, InferEntrySchema } from "astro:content";
+import type { CollectionEntry } from "astro:content";
 import {
   Carousel,
   CarouselContent,
+  CarouselDots,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
@@ -15,17 +16,19 @@ interface AchievementsCarouselProps {
 const AchievementsCarousel: React.FC<AchievementsCarouselProps> = ({
   achievements,
 }) => {
+  
   return (
     <Carousel>
       <CarouselContent className="-ml-4">
         {achievements.map((achievement, index) => (
-          <CarouselItem className="basis-1/3 pl-4">
+          <CarouselItem className=" sm:basis-1/2 lg:basis-1/3 pl-4">
             <AchievementCard key={index} achievement={achievement.data} className="h-[99%]"/>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious  className="hidden lg:inline-flex"/>
+      <CarouselNext className="hidden lg:inline-flex"/>
+      <CarouselDots className="mt-2"/>
     </Carousel>
   );
 };
