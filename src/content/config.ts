@@ -37,7 +37,7 @@ export const collections = {
   }),
   achievements: defineCollection({
     type: "content",
-    schema: ({ image }) =>
+    schema: () =>
       z.object({
         title: z.string(),
         type: z.string(),

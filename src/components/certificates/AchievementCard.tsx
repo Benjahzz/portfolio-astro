@@ -24,7 +24,7 @@ const AchievementCard: React.FC<AchievementCardProps> = ({
   achievement,
   className,
 }) => {
-  const { date, description, imageUrl, order, title, type, url, buttonText } =
+  const { date, description, imageUrl, title, type, url, buttonText } =
     achievement;
 
   let headerImage = cloudinaryClient.image(
