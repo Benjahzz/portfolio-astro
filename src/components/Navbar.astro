@@ -1,43 +1,22 @@
 ---
+import MobileNavbar from "./MobileNavbar";
 import ToggleTheme from "./ToggleTheme";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
+import {NAV_LINKS} from "@/constants";
 ---
 
 <header class="flex justify-between py-10 items-center">
   <nav>
-    <ul class="flex gap-5 font-medium text-base">
-      <li><a href="/">Inicio</a></li>
-      <li><a href="#about">Sobre mi</a></li>
-      <li><a href="#projects">Proyectos personales</a></li>
-      <li><a href="#experience">Experiencia</a></li>
-      <li><a href="#achievements">Certificados y cursos</a></li>
+    <ul class="gap-5 text-base hidden md:flex">
+      {
+        NAV_LINKS.map((link) => (
+          <li>
+            <a href={link.href}>{link.label}</a>
+          </li>
+        ))
+      }
     </ul>
+    <MobileNavbar client:load />
   </nav>
   {/* Mobile Menu */}
-  <Sheet open={isOpen} onOpenChange={setIsOpen}>
-    <SheetTrigger asChild>
-      <Button variant="ghost" size="icon" className="mr-2 lg:hidden">
-        <Menu className="h-5 w-5" />
-        <span className="sr-only">Toggle menu</span>
-      </Button>
-    </SheetTrigger>
-    <SheetContent side="left" className="w-[300px] sm:w-[400px]">
-      <SheetHeader>
-        <SheetTitle>Menú</SheetTitle>
-      </SheetHeader>
-      <nav className="flex flex-col space-y-4 pt-4">
-        {menuItems.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            className="text-sm font-medium transition-colors hover:text-primary"
-            onClick={() => setIsOpen(false)}
-          >
-            {item.text}
-          </Link>
-        ))}
-      </nav>
-    </SheetContent>
-  </Sheet>
   <ToggleTheme client:load />
 </header>
