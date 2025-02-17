@@ -18,10 +18,9 @@ jobs:
   
   build:
     runs-on: ubuntu-latest
-    env:
-      PUBLIC_CLOUDINARY_CLOUD_NAME: ${{ secrets.PUBLIC_CLOUDINARY_CLOUD_NAME }}
+    environment:
+      name: github-pages
     steps:
-        
       - name: Checkout your repository using git
         uses: actions/checkout@v4
       - name: Install, build, and upload your site
