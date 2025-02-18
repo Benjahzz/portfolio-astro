@@ -1,6 +1,6 @@
 export const NAV_LINKS = [
     {
-        href: "#",
+        href: "/portfolio-astro/",
         label: "Inicio",
     },
     {

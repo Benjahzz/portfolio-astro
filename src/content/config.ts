@@ -24,15 +24,24 @@ export const collections = {
         description: z.string(),
         usedTools: z.array(z.string()),
         logo: image(),
-        sections: z.array(
-          z.object({
-            title: z.string(),
-            content: z.string(),
-            images: z.array(
-              z.object({ src: z.string(), alt: z.string() })
-            ),
-          })
-        ),
+        detailsPage: z.object({
+          sections: z.array(
+            z.object({
+              title: z.string(),
+              content: z.string(),
+              images: z.array(
+                z.object({
+                  src: z.string(),
+                  alt: z.string(),
+                  width: z.number(),
+                  height: z.number(),
+                })
+              ),
+            })
+          ),
+          usedTools: z.array(z.string()),
+          palette: z.array(z.string()),
+        }),
       }),
   }),
   achievements: defineCollection({

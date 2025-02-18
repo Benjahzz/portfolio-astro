@@ -21,10 +21,11 @@ export async function getStaticPaths() {
 }
 
 const { project } = Astro.props;
+const {sections,usedTools,palette} = project.detailsPage;
 ---
 
 <Layout>
-  <main class="flex flex-col gap-20">
+  <main class="flex flex-col gap-24">
     <div class="space-y-6">
       <div class="space-y-2">
         <h1 class="text-3xl font-bold">{project.title}</h1>
@@ -44,29 +45,62 @@ const { project } = Astro.props;
       </div>
     </div>
     {
-      project.sections.map((section, index) => {
+      sections.map((section, index) => {
         const order =
           index % 2 === 0 ? "flex-row" : "flex-row-reverse";
 
         return (
-          <div class={`flex  gap-6  md:gap-12 ${order}`}>
+          <div class={`flex  gap-6 md:gap-12 ${order}`}>
             <div class={`flex flex-col gap-4 flex-1 `}>
               <h2 class="text-2xl font-bold tracking-tighter">
                 {section.title}
               </h2>
               <p class="text-muted-foreground">{section.content}</p>
             </div>
-            <div class={`flex flex-col gap-4 flex-1 max-w-2xl`}>
+            <div
+              class={`flex gap-4 flex-1 max-w-2xl w-fit justify-center flex-wrap`}
+            >
               {section.images.map((image) => (
                 <CldImage
                   src={`portfolio-renew/${image.src}`}
                   alt={image.alt}
+                  width={image.width}
+                  height={image.height}
+                  class={"w-full object-contain rounded-md "}
                 />
               ))}
             </div>
           </div>
         );
       })
+    }
+    
+    {
+      usedTools.length > 0 && (
+        <div class="flex flex-col gap-4">
+          <h2 class="text-2xl font-bold tracking-tighter">Herramientas utilizadas</h2>
+          <div class="flex gap-4 flex-wrap items-center">
+            {usedTools.map((tool) => (
+              <img src={`/portfolio-astro/icons/${tool}.webp`} alt={tool} class="w-12 h-12 object-contain" />
+            ))}
+          </div>
+        </div>
+      )
+    }
+    {
+      palette && (
+        <div class="flex flex-col gap-4">
+          <h2 class="text-2xl font-bold tracking-tighter">Paleta de colores</h2>
+          <div class="flex gap-4 flex-wrap">
+            {palette.map((color) => (
+              <div
+                class="w-12 h-12 rounded-md"
+                style={{ backgroundColor: color }}
+              ></div>
+            ))}
+          </div>
+        </div>
+      )
     }
   </main>
 </Layout>
