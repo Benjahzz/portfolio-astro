@@ -12,6 +12,9 @@ export default defineConfig({
   experimental: {
     svg: true,
   },
+  build: {
+    inlineStylesheets: 'auto'
+  },
   integrations: [
     tailwind({
       applyBaseStyles: false,

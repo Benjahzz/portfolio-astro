@@ -14,6 +14,7 @@ import {
 import { cloudinaryClient } from "@/utils/cloudinary/cloudinaryClient";
 import type { InferEntrySchema } from "astro:content";
 import { formatDate } from "@/utils/formatDate";
+import { fill } from "@cloudinary/url-gen/actions/resize";
 
 interface AchievementCardProps
   extends React.HTMLAttributes<HTMLDivElement> {
@@ -29,7 +30,7 @@ const AchievementCard: React.FC<AchievementCardProps> = ({
 
   let headerImage = cloudinaryClient.image(
     `portfolio-renew/${imageUrl}`
-  );
+  ).resize(fill().width(40).height(40)).quality("auto")
   return (
     <Card className={className}>
       <CardHeader>
