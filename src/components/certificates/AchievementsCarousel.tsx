@@ -21,7 +21,7 @@ const AchievementsCarousel: React.FC<AchievementsCarouselProps> = ({
     <Carousel>
       <CarouselContent className="-ml-4">
         {achievements.map((achievement, index) => (
-          <CarouselItem className=" sm:basis-1/2 lg:basis-1/3 pl-4">
+          <CarouselItem className=" sm:basis-1/2 lg:basis-1/3 pl-4" key={achievement.data.title}>
             <AchievementCard key={index} achievement={achievement.data} className="h-[99%]"/>
           </CarouselItem>
         ))}
