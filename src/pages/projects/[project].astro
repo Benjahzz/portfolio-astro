@@ -6,6 +6,7 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { getCollection } from "astro:content";
 import { ExternalLink } from "lucide-react";
 import { CldImage } from "astro-cloudinary";
+import CloudinaryImage from "@/components/CloudinaryImage";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -25,7 +26,7 @@ const {sections,usedTools,palette} = project.detailsPage;
 ---
 
 <Layout>
-  <main class="flex flex-col gap-24">
+  <main class="flex flex-col gap-32">
     <div class="space-y-6">
       <div class="space-y-2">
         <h1 class="text-3xl font-bold">{project.title}</h1>
@@ -33,7 +34,7 @@ const {sections,usedTools,palette} = project.detailsPage;
           >{project.type}</Badge
         >
       </div>
-      <div class="flex gap-4">
+      <div class="flex gap-4 flex-wrap">
         <Button>
           Ir a la página
           <ExternalLink className="w-4 h-4 ml-2" />
@@ -47,10 +48,10 @@ const {sections,usedTools,palette} = project.detailsPage;
     {
       sections.map((section, index) => {
         const order =
-          index % 2 === 0 ? "flex-row" : "flex-row-reverse";
+          index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse";
 
         return (
-          <div class={`flex  gap-6 md:gap-12 ${order}`}>
+          <div class={`flex gap-6 md:gap-12 ${order} flex-col`}>
             <div class={`flex flex-col gap-4 flex-1 `}>
               <h2 class="text-2xl font-bold tracking-tighter">
                 {section.title}
@@ -61,12 +62,13 @@ const {sections,usedTools,palette} = project.detailsPage;
               class={`flex gap-4 flex-1 max-w-2xl w-fit justify-center flex-wrap`}
             >
               {section.images.map((image) => (
-                <CldImage
-                  src={`portfolio-renew/${image.src}`}
-                  alt={image.alt}
+                <CloudinaryImage
+                  src={image.src}
                   width={image.width}
                   height={image.height}
-                  class={"w-full object-contain rounded-md "}
+                  lazy
+                  className={`object-contain rounded-md `}
+                  client:load
                 />
               ))}
             </div>
@@ -81,7 +83,7 @@ const {sections,usedTools,palette} = project.detailsPage;
           <h2 class="text-2xl font-bold tracking-tighter">Herramientas utilizadas</h2>
           <div class="flex gap-4 flex-wrap items-center">
             {usedTools.map((tool) => (
-              <img src={`/portfolio-astro/icons/${tool}.webp`} alt={tool} class="w-12 h-12 object-contain" />
+              <img src={`/portfolio-astro/icons/${tool}.webp`} alt={tool} class="w-12 h-12 object-contain rounded-md" />
             ))}
           </div>
         </div>
@@ -94,7 +96,7 @@ const {sections,usedTools,palette} = project.detailsPage;
           <div class="flex gap-4 flex-wrap">
             {palette.map((color) => (
               <div
-                class="w-12 h-12 rounded-md"
+                class="w-12 h-12 rounded-md border border-gray-200"
                 style={{ backgroundColor: color }}
               ></div>
             ))}

@@ -8,7 +8,7 @@ const achievements = (await getCollection("achievements")).sort(
 );
 ---
 
-<section class="flex flex-col gap-6">
+<section class="flex flex-col gap-6" id="achievements">
   <SectionHeader title="Certificados y cursos" />
   <div class="w-full">
     <AchievementsCarousel achievements={achievements} client:load />

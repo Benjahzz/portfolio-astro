@@ -9,12 +9,14 @@ import { Button } from "../ui/button";
 import {
   AdvancedImage,
   lazyload,
+  placeholder,
   responsive,
 } from "@cloudinary/react";
 import { cloudinaryClient } from "@/utils/cloudinary/cloudinaryClient";
 import type { InferEntrySchema } from "astro:content";
 import { formatDate } from "@/utils/formatDate";
-import { fill } from "@cloudinary/url-gen/actions/resize";
+import { fit } from "@cloudinary/url-gen/actions/resize";
+import CloudinaryImage from "../CloudinaryImage";
 
 interface AchievementCardProps
   extends React.HTMLAttributes<HTMLDivElement> {
@@ -25,20 +27,25 @@ const AchievementCard: React.FC<AchievementCardProps> = ({
   achievement,
   className,
 }) => {
-  const { date, description, imageUrl, title, type, url, buttonText } =
-    achievement;
+  const {
+    date,
+    description,
+    imageUrl,
+    title,
+    type,
+    url,
+    buttonText,
+  } = achievement;
 
-  let headerImage = cloudinaryClient.image(
-    `portfolio-renew/${imageUrl}`
-  ).resize(fill().width(40).height(40)).quality("auto")
   return (
     <Card className={className}>
       <CardHeader>
         <div className="flex items-center">
-          <AdvancedImage
-            cldImg={headerImage}
-            plugins={[lazyload(), responsive()]}
+          <CloudinaryImage
+            src={imageUrl}
             className="w-10 h-10 mr-2 object-contain"
+            width={40}
+            height={40}
           />
           <h2>{title}</h2>
         </div>
@@ -53,7 +60,7 @@ const AchievementCard: React.FC<AchievementCardProps> = ({
         </p>
       </CardContent>
       <CardFooter>
-        <a href={url} target="_blank" rel="noreferrer" >
+        <a href={url} target="_blank" rel="noreferrer">
           <Button variant={"outline"}>{buttonText}</Button>
         </a>
       </CardFooter>
