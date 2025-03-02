@@ -7,8 +7,8 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://benjahzz.github.io/portfolio-astro/",
-  base: "/portfolio-astro/",
+  site: "https://portfolio-astro-kohl-nu.vercel.app/",
+  base: "/",
   experimental: {
     svg: true,
   },

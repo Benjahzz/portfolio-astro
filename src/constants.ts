@@ -1,22 +1,22 @@
 export const NAV_LINKS = [
     {
-        href: "/portfolio-astro/#",
+        href: "/#",
         label: "Inicio",
     },
     {
-        href: "/portfolio-astro/#about",
+        href: "/#about",
         label: "Sobre mi",
     },
     {
-        href: "#projects",
+        href: "/#projects",
         label: "Proyectos personales",
     },
     {
-        href: "#experience",
+        href: "/#experience",
         label: "Experiencia profesional",
     },
     {
-        href: "#achievements",
+        href: "/#achievements",
         label: "Certificado y cursos",
     },
 ]
