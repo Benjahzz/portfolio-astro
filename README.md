@@ -4,6 +4,7 @@
 A brief description of what this project does and who it's for
 
 ![Astro Badge](https://img.shields.io/badge/Astro-BC52EE?logo=astro&logoColor=fff&style=flat)
+![Astro Badge](https://img.shields.io/badge/Bun-000?logo=bun&logoColor=fff)
 ![GitHub stars](https://img.shields.io/github/stars/Benjahzz/portfolio-astro)
 
 ## 🛠️ Herramientas
