@@ -1,7 +1,7 @@
 
 # Portfolio - Benjamin Bastidas
 
-A brief description of what this project does and who it's for
+Este es mi portafolio personal, desarrollado con Astro, React, y otras tecnologías modernas para ofrecer un sitio rápido, dinámico y fácil de mantener.
 
 ![Astro Badge](https://img.shields.io/badge/Astro-BC52EE?logo=astro&logoColor=fff&style=flat)
 ![Astro Badge](https://img.shields.io/badge/Bun-000?logo=bun&logoColor=fff)
