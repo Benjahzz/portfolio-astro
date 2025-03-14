@@ -3,7 +3,7 @@ order: 2
 title: WatchToo
 type: Aplicación WEB de series y películas
 description: |
-  Mr Hardware es una pagina web para comparar productos de hardware de diferentes tiendas en Chile. Los productos son actualizados diariamente (scraping) y se pueden comparar precios, disponibilidad y características de los productos.
+  WatchToo es una aplicación web que permite a los usuarios buscar y descubrir películas y series de televisión. La aplicación ofrece información detallada sobre las películas y series, incluyendo sinopsis, reparto, puntuación y tráiler.
 usedTools:
   [
     "Next.js",
@@ -15,6 +15,7 @@ usedTools:
     "Figma",
   ]
 logo: ../../assets/images/projects/project-02.svg
+github: "https://github.com/Benjahzz/movies_app"
 detailsPage: {
 sections:
   [

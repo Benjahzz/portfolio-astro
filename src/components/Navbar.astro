@@ -3,8 +3,8 @@ import MobileNavbar from "./MobileNavbar";
 import {NAV_LINKS} from "@/constants";
 ---
 
-<header class="flex justify-between py-8 items-center">
-  <nav>
+<header class="flex justify-between p-4 sm:p-8 items-center border-b border-gray-100 sticky top-0 bg-white z-20">
+  <nav class="flex md:justify-center w-full">
     <ul class="gap-5 text-base hidden md:flex">
       {
         NAV_LINKS.map((link) => (

@@ -3,7 +3,7 @@ order: 1
 title: Topofertas
 type: Sistema web de ofertas y descuentos
 description: |
-  Mr Hardware es una pagina web para comparar productos de hardware de diferentes tiendas en Chile. Los productos son actualizados diariamente (scraping) y se pueden comparar precios, disponibilidad y características de los productos.
+  Topofertas es una aplicación web creada como proyecto de título (tesis). Fue creada con el objetivo de ayudar a los usuarios a encontrar los mejores precios de productos en Chile. También fue para poner a prueba todo lo aprendido anteriormente con el proyecto Mr Hardware.
 usedTools:
   [
     "Next.js",
@@ -24,7 +24,7 @@ detailsPage:
       [
         {
           title: "Contexto",
-          content: "Topofertas es una aplicación web creada como proyecto de titulo (tesis). Fue creada con el objetivo de ayudar a los usuarios a encontrar los mejores precios de productos en Chile. También fue para poner a prueba todo lo aprendido anteriormente con el proyecto Mr Hardware.",
+          content: "Topofertas es una aplicación web creada como proyecto de título (tesis). Fue creada con el objetivo de ayudar a los usuarios a encontrar los mejores precios de productos en Chile. También fue para poner a prueba todo lo aprendido anteriormente con el proyecto Mr Hardware.",
           images:
             [
               {
@@ -37,7 +37,7 @@ detailsPage:
         },
         {
           title: "Objetivo",
-          content: "Este proyecto tiene como propósito ayudar a las personas a encontrar sus productos al mejor precio y con descuentos. Como tambien de ayuda para empresas o tiendas a publicar sus ofertas y descuentos. La aplicación quería mejorar lo que ya algunas páginas web hacen, pero con opciones extras y enfoque más accesible.",
+          content: "Este proyecto tiene como propósito ayudar a las personas a encontrar sus productos al mejor precio y con descuentos. Como también de ayuda para empresas o tiendas a publicar sus ofertas y descuentos. La aplicación quería mejorar lo que ya algunas páginas web hacen, pero con opciones extras y enfoque más accesible.",
           images:
             [
               {
@@ -89,7 +89,7 @@ detailsPage:
         },
         {
           title: "Diseño",
-          content: "El diseño de la pagina web fue creado en Figma. La pagina web es responsive y se adapta a cualquier dispositivo, tambien se utilizó shadcn para los componentes y así darle un toque mas moderno y atractivo.",
+          content: "El diseño de la página web fue creado en Figma. La página web es responsive y se adapta a cualquier dispositivo, también se utilizó shadcn para los componentes y así darle un toque más moderno y atractivo.",
           images:
             [
               {

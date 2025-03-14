@@ -5,7 +5,7 @@ import { ArrowRight, Download } from "lucide-react";
 ---
 
 <section
-  class="flex flex-col items-center justify-center gap-4 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32 relative"
+  class="flex flex-col items-center justify-center gap-4 pb-8 pt-24  sm:pt-32 md:pb-12  relative scroll-mt-32"
   id="home"
 >
   <!-- Logo -->
@@ -65,9 +65,11 @@ import { ArrowRight, Download } from "lucide-react";
         <ArrowRight className="ml-2 h-4 w-4" />
       </Button>
     </a>
+   <a href="/download/CV_BENJAMIN_BASTIDAS.pdf" download>
     <Button variant="outline">
       Descargar CV
       <Download className="ml-2 h-4 w-4" />
     </Button>
+   </a>
   </div>
 </section>

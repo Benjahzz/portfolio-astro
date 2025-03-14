@@ -22,6 +22,7 @@ export const collections = {
         title: z.string(),
         type: z.string(),
         description: z.string(),
+        github: z.string().optional(),
         usedTools: z.array(z.string()),
         logo: image(),
         detailsPage: z.object({
