@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import AchievementsCarousel from "../certificates/AchievementsCarousel";
+import AchievementsCarousel from "../certificates/AchievementsCarousel.tsx";
 import SectionHeader from "../SectionHeader.astro";
 
 const achievements = (await getCollection("achievements")).sort(
@@ -11,6 +11,6 @@ const achievements = (await getCollection("achievements")).sort(
 <section class="flex flex-col gap-6 scroll-mt-32" id="achievements">
   <SectionHeader title="Certificados y cursos" />
   <div class="w-full">
-    <AchievementsCarousel achievements={achievements} client:load />
+    <AchievementsCarousel client:load achievements={achievements}  />
   </div>
 </section>

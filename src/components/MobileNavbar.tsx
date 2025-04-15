@@ -8,10 +8,12 @@ import {
 import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
 import { NAV_LINKS } from "@/constants";
+import { useState } from "react";
 
 const MobileNavbar = () => {
+
   return (
-    <Sheet>
+    <Sheet >
       <SheetTrigger asChild>
         <Button
           variant="ghost"
@@ -22,7 +24,7 @@ const MobileNavbar = () => {
           <span className="sr-only">Toggle menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="w-[300px] sm:w-[400px]">
+      <SheetContent side="left" className="w-[300px] sm:w-[400px] z-[60]">
         <SheetHeader className="text-left">
           <SheetTitle>Menú</SheetTitle>
         </SheetHeader>
